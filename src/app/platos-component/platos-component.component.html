@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gambas al punto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Gambas_3_logo.svg/256px-Gambas_3_logo.svg.png"
+      alt="Logo" class="logo">
+    <h1 align="center" class="title">Gambas al punto</h1>
+    <button (click) = irMain()><img src="../../assets/img/Go-back_36760.png"></button>
+    
+  </header>
+
+
+
+
+
+  <div class="botones">
+    <!-- Tabla para Platos -->
+    <table border="" style="float: left;">
+      <tr>
+        <td>
+          <button class="botonesDesplegables" (click)="ocultarPlatos()">Platos</button>
+          <div *ngIf="auxplatos === false">
+            <div *ngFor="let plato of platos; index as i">
+              <h3 class="textalineado" id="name">{{plato.name}}</h3>
+              <img src="{{plato.img}}" class="imgItems" id="img">
+              <h5 class="textalineado" id="precio">Precio: {{plato.precio}}€</h5>
+              <h5 class="textalineado">Valoracion: {{plato.valoracion}}</h5>
+              <button style="float: right;" (click)="anadirProducto(plato)">añadir</button>
+              <hr style="clear: both;">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Tabla para Bebidas -->
+    <table border="" style="float: left;">
+      <tr>
+        <td>
+          <button class="botonesDesplegables" (click)="ocultarBebidas()">Bebidas</button>
+          <div *ngIf="auxBebidas === false">
+            <div *ngFor="let bebida of bebidas; index as i">
+              <h3 class="textalineado">{{bebida.name}}</h3>
+              <img src="{{bebida.img}}" class="imgItems">
+              <h5 class="textalineado" id="precio">Precio: {{bebida.precio}}€</h5>
+              <h5 class="textalineado">Valoracion: {{bebida.valoracion}}</h5>
+              <button style="float: right;" (click)="anadirProducto(bebida)">añadir</button>
+              <hr style="clear: both;">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Tabla para Extras -->
+    <table border="" style="float: left;">
+      <tr>
+        <td>
+          <button class="botonesDesplegables" (click)="ocultarExtras()">Extras</button>
+          <div *ngIf="auxExtras === false">
+            <div *ngFor="let extra of extras; index as i">
+              <h3 class="textalineado">{{extra.name}}</h3>
+              <img src="{{extra.img}}" class="imgItems">
+              <h5 class="textalineado" id="precio">Precio: {{extra.precio}}€</h5>
+              <h5 class="textalineado">Valoracion: {{extra.valoracion}}</h5>
+              <button style="float: right;" (click)="anadirProducto(extra)">añadir</button>
+              <hr style="clear: both;">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="botonCompra" style="background-color: white;" style="float: right;" (click) = carritoBoton()>
+    <img align="center" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png">
+  </button>
+
+
+  <div *ngIf="auxCompra === false">
+    <table border="" style="float: right;" class="tablaResult">
+      <tr style="background-color: #0E0E0E;" align="center" height="10">
+        <td>
+          <h3 style="color: white;">Tu Carrito</h3>
+        </td>
+      </tr>
+      <tr align="center" *ngFor="let productos of carritoCompra; index as i">
+        <td>
+          <h4>{{productos.name}}</h4>
+          <h5>{{productos.precio}}€</h5>
+          <br>
+        </td>
+      </tr>
+      <tr align="center" height="12">
+        <td colspan="3">Total = {{total}}€</td>
+      </tr>
+      <tr align="center" height="10">
+        <td colspan="3">
+          <button (click) = pagar()>Pagar</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+</body>
+
+</html>

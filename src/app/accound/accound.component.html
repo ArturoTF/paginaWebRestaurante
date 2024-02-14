@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="account-tab">
+            <h2>Mi Cuenta</h2>
+            <div class="account-info">
+                <label for="account-name">Nombre de la cuenta:</label>
+                <p id="account-name">{{ userName }}</p>
+
+                <label for="order-history">Historial de pedidos:</label>
+                <ul id="order-history">
+                    <li>Pedido 1</li>
+                    <li>Pedido 2</li>
+                </ul>
+
+                <label for="favorite-dish">Plato favorito:</label>
+                <p id="favorite-dish">Nombre del Plato</p>
+
+                <label for="payment-method">Método de pago:</label>
+                <select id="payment-method">
+                    <option value="tarjeta">Tarjeta de crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bizum">Bizum</option>
+                    <option value="G2A">G2A</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

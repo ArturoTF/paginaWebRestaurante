@@ -1,0 +1,173 @@
+body{
+    background-color: rgb(133, 193, 173);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.title{
+    margin-left: 100px;
+}
+
+header img {
+    max-width: 100px;
+}
+
+.contenedor-header {
+    text-align: right;
+}
+
+.contenedor-header a {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.barra {
+    background-color: #444;
+    text-align: center;
+}
+
+.barra ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.barra ul li {
+    display: inline;
+}
+
+.barra ul li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.barra a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 30px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.image-restaurante {
+    text-align: center;
+    margin: 40px auto; 
+    padding: 20px 0; 
+}
+
+.image-restaurante img {
+    max-width: 45%;
+    height: 200px;
+    margin: 0 2.5%; 
+}
+
+.restaurant-description {
+    text-align: left;
+    font-size: 16px;
+    margin-right: 20px; 
+    float: left; 
+    width: 10%; 
+    margin: 0 auto; 
+}
+
+.desplegable {
+    float: left;
+    margin-left: 10px;
+}
+
+#desplegable-select {
+    padding: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#desplegable-select option {
+    background-color: #444;
+    color: #fff;
+}
+
+
+/* Estilos para el carrusel */
+#image-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#image-carousel img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact p {
+    font-size: 20px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact li {
+    margin: 0 10px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info p {
+    font-weight: bold;
+}
+
+.logoART img{
+    width: 100px;
+    height: 100px;
+}

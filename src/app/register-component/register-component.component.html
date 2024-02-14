@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <form>
+            <h2>Register</h2>
+            <div class="inputs">
+                <input type="text" id="correo" name="correo" placeholder="Correo" required><br>
+                <input type="text" id="username" name="username" placeholder="Usuario" required><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                <input type="password" id="Rpassword" name="Rpassword" placeholder="Repeat Password" required><br>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox" name="checkbox" required>
+                <label for="password">You agree to our terms of service and knowledge that you have read and understand
+                    our privacy policy and code of conduct.</label>
+            </div>
+        </form>
+        <br>
+        <button (click)=clickRegister()>Register</button>
+    </div>
+</body>
+
+</html>

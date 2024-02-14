@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh; /* 100% de la altura de la ventana */
+            background-color: {{ fondo }};
+            transition: background-color 0.5s; /* Agregar transición para suavizar el cambio */
+        }
+    </style>
+</head>
+<body [style.background-color]="fondo">
+    <div class="container">
+        <div class="form-group">
+            <label style="color: {{color}};">Nombre:</label>
+            <input value="Arturo">
+        </div>
+        <div class="form-group">
+            <label style="color: {{color}};">Correo:</label>
+            <input value="Ingrese su correo">
+        </div>
+        <div class="form-group">
+            <label style="color: {{color}};">Contraseña:</label>
+            <input value="••••••••">
+        </div>
+        <div class="modes">
+            <button>Modo Disléxico</button>
+            <button (click)="clickDarkMode()">Modo Oscuro</button>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
